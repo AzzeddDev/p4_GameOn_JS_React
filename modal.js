@@ -22,4 +22,4 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block";
 }
-
+document.querySelector('.close').addEventListener("click",closeModal);
