@@ -23,3 +23,7 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+//Fonction pour fermer la modale
+function closeModal() {
+  modalbg.style.display = "none"; }
+document.querySelector('.close').addEventListener("click",closeModal);
