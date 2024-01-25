@@ -235,3 +235,41 @@ function checkboxLocationFormControl() {
 checkLocation.forEach((checkLocationInput) => checkLocationInput.addEventListener('change', function() {
     checkboxLocationFormControl();
 }));
+
+
+
+
+////////////////////////////////////////////////
+//////                                   ///////
+//////         Conditions Field          ///////
+//////                                   ///////
+////////////////////////////////////////////////
+
+// Variables for checkboxes field
+let checkbox1 = document.querySelector("#checkbox1");
+let conditionCheckboxError = document.querySelector("#conditionCheckboxError");
+
+
+// Function for checkboxes field
+function conditionCheckboxFormControl() {
+    if(checkbox1.checked ) {
+        checkbox1.style.border = "solid 2px green";
+        conditionCheckboxError.textContent = "Champs Valide";
+        conditionCheckboxError.style.color = "green";
+        conditionCheckboxError.style.fontSize = "15px";
+        conditionCheckboxError.style.marginBottom = '10px';
+        return true;
+
+    } else {
+        checkbox1.style.border = "solid 2px red";
+        conditionCheckboxError.textContent = "Merci d'accepter les conditions d'utilisations";
+        conditionCheckboxError.style.fontSize = '15px';
+        conditionCheckboxError.style.marginBottom = '10px';
+        conditionCheckboxError.style.color = 'red';
+        return false;
+    }
+}
+
+checkbox1.addEventListener('change', () => {
+    conditionCheckboxFormControl();
+});
