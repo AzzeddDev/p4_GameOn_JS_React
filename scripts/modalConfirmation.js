@@ -1,6 +1,7 @@
 // Variables
 const btnSubmit = document.querySelector(".btn-submit");
 const modalConfirmation = document.querySelector(".formConfirmation");
+const btnCloseConfirm = document.querySelector(".btn-close-confirm");
 const form = document.querySelector('form');
 
 
@@ -15,3 +16,9 @@ btnSubmit.addEventListener('click', e => {
         alert('Merci de remplir correctement votre inscription.');
     }
 })
+
+
+// Close Function after confirmation
+btnCloseConfirm.addEventListener("click", () => {
+    window.location.reload();
+});
