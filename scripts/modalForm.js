@@ -183,7 +183,6 @@ function quantityFormControl () {
         return true;
     }
 
-
     else {
         quantity.style.border = "solid 2px red";
         quantityError.textContent = "Merci d'indiquer le nombre de tournois";
@@ -197,3 +196,42 @@ function quantityFormControl () {
 quantity.addEventListener('change', () => {
     quantityFormControl();
 });
+
+
+
+
+////////////////////////////////////////////////
+//////                                   ///////
+//////         Checkboxes Field          ///////
+//////                                   ///////
+////////////////////////////////////////////////
+
+// Variables for checkboxes field
+let checkLocation = document.getElementsByName("location");
+let locationError = document.querySelector("#locationError");
+
+
+// Function for checkboxes field
+function checkboxLocationFormControl() {
+
+    for(let i = 0; i < checkLocation.length; i++) {
+
+        if(checkLocation[i].checked) {
+            locationError.textContent ='Champ Valide';
+            locationError.style.color = 'green';
+            locationError.style.fontSize = '15px';
+            locationError.style.marginBottom = '10px';
+            return true;
+        }
+    }
+
+    locationError.textContent ='Champ Invalide';
+    locationError.style.color = 'red';
+    locationError.style.fontSize = '15px';
+    locationError.style.marginBottom = '10px';
+    return false;
+}
+
+checkLocation.forEach((checkLocationInput) => checkLocationInput.addEventListener('change', function() {
+    checkboxLocationFormControl();
+}));
