@@ -157,3 +157,43 @@ function birthdateFieldControl () {
 birthdate.addEventListener('change', () => {
     birthdateFieldControl();
 });
+
+
+
+
+////////////////////////////////////////////////
+//////                                   ///////
+//////          Quantity Field           ///////
+//////                                   ///////
+////////////////////////////////////////////////
+
+// Variables for quantity field
+let quantity = document.querySelector("#quantity");
+let quantityError = document.querySelector("#quantityError");
+
+// Function for quantity field
+function quantityFormControl () {
+
+    if (quantity.value >= 0) {
+        quantity.style.border = "solid 2px green";
+        quantityError.textContent = "Champ Valide";
+        quantityError.style.color = "green";
+        quantityError.style.fontSize = "14px";
+        quantityError.style.marginBottom = '10px';
+        return true;
+    }
+
+
+    else {
+        quantity.style.border = "solid 2px red";
+        quantityError.textContent = "Merci d'indiquer le nombre de tournois";
+        quantityError.style.fontSize = '15px';
+        quantityError.style.marginBottom = '10px';
+        quantityError.style.color = 'red';
+        return false;
+    }
+}
+
+quantity.addEventListener('change', () => {
+    quantityFormControl();
+});
