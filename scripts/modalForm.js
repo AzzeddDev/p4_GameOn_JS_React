@@ -76,3 +76,43 @@ function lastNameFieldControl () {
 firstNameField.addEventListener('change', () => {
     lastNameFieldControl();
 });
+
+
+
+
+////////////////////////////////////////////////
+//////                                   ///////
+//////           Email Field             ///////
+//////                                   ///////
+////////////////////////////////////////////////
+
+// Variables for email field
+let email = document.querySelector("#email");
+let emailError = document.querySelector("#emailError");
+
+
+// Function for email field
+function emailFieldControl () {
+
+    if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value)) {
+        email.style.border = "solid 2px green";
+        emailError.textContent = "Champ Valide";
+        emailError.style.fontSize = '14px';
+        emailError.style.color = 'green';
+        emailError.style.marginBottom = '5px';
+        return true;
+    }
+
+    else {
+        email.style.border = "solid 2px red";
+        emailError.textContent = "Veuillez rentrer une adresse email valide";
+        emailError.style.fontSize = '14px';
+        emailError.style.color = 'red';
+        emailError.style.marginBottom = '5px';
+        return false;
+    }
+}
+
+email.addEventListener('change', () => {
+    emailFieldControl();
+});
