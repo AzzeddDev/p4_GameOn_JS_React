@@ -53,8 +53,8 @@ let lastNameFieldError = document.querySelector("#lastNameError");
 // Function for first field "Nom" form -> lastName
 function lastNameFieldControl () {
 
-    if (/^([A-Za-z]{2,20})?([-]{0,1})?([A-Za-z]{2,20})$/.test(firstNameField.value)) {
-        firstNameField.style.border = "solid 1px green";
+    if (/^([A-Za-z]{2,20})?([-]{0,1})?([A-Za-z]{2,20})$/.test(lastNameField.value)) {
+        lastNameField.style.border = "solid 1px green";
         lastNameFieldError.textContent = "Champ Valide";
         lastNameFieldError.style.color = 'green';
         lastNameFieldError.style.fontSize = '14px';
@@ -73,7 +73,7 @@ function lastNameFieldControl () {
 
 }
 
-firstNameField.addEventListener('change', () => {
+lastNameField.addEventListener('change', () => {
     lastNameFieldControl();
 });
 
