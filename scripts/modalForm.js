@@ -116,3 +116,44 @@ function emailFieldControl () {
 email.addEventListener('change', () => {
     emailFieldControl();
 });
+
+
+
+
+////////////////////////////////////////////////
+//////                                   ///////
+//////          Birthdate Field          ///////
+//////                                   ///////
+////////////////////////////////////////////////
+
+// Variables for birthdate field
+let birthdate = document.querySelector("#birthdate");
+let birthdateError = document.querySelector("#birthDateError");
+
+
+// Function for birthdate field
+function birthdateFieldControl () {
+
+    if (/^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/.test(birthdate.value)) {
+        birthdate.style.border = "solid 2px green";
+        birthdateError.textContent = "Champ Valide";
+        birthdateError.style.fontSize = '14px';
+        birthdateError.style.marginBottom = '10px';
+        birthdateError.style.color = 'green';
+        return true;
+    }
+
+    else {
+        birthdate.style.border = "solid 2px red";
+        birthdateError.textContent = "Vous devez entrer votre date de naissance.";
+        birthdateError.style.fontSize = '14px';
+        birthdateError.style.marginBottom = '10px';
+        birthdateError.style.color = 'red';
+        return false;
+    }
+
+}
+
+birthdate.addEventListener('change', () => {
+    birthdateFieldControl();
+});
