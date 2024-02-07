@@ -7,6 +7,7 @@ const form = document.querySelector('form');
 
 // Function send input fields and confirmation popup
 btnSubmit.addEventListener('click', e => {
+    // On empêche le comportement par défaut
     e.preventDefault();
 
     if(firstNameFieldControl() && lastNameFieldControl() && emailFieldControl() && birthdateFieldControl() && quantityFormControl() && checkboxLocationFormControl() && conditionCheckboxFormControl()){
