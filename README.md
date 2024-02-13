@@ -16,7 +16,7 @@ Pour tester ce projet, veuillez vous rendre sur le site live pour visualiser : [
 
 ## Validation au W3C du projet :
 
-![img.png](img/img.png)
+![img.png](img/html-checker.png)
 
 Sinon, clonez le projet :
 ```
