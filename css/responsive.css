@@ -1,0 +1,158 @@
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media all and (min-width: 767px) and (max-width: 980px) {
+    .hero-section {
+        display: block;
+        box-shadow: unset;
+        height: auto;
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+        font-weight: 600;
+        white-space: normal;
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+    }
+
+    .hero-content {
+        background: #fff;
+        color: #000;
+        padding: 20px 10px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media all and (max-width: 767px) {
+    .header-logo img {
+        width: 55%;
+        margin-left: 10px;
+    }
+
+    .topnav a.icon {
+        margin-top: -10px!important;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-top: -10px;
+        color: red;
+    }
+
+    main {
+        margin-bottom: 0;
+    }
+
+    .hero-section {
+        display: block;
+        box-shadow: unset;
+        height: auto;
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+        font-weight: 600;
+        white-space: normal;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .hero-content {
+        background: #fff;
+        color: #000;
+        padding: 20px 10px;
+    }
+
+    .hero-img img {
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        margin: 6.5%;
+    }
+
+    .hero-section > .btn-signup {
+        padding: 10px 40px;
+        font-size: .9rem;
+    }
+
+    .copyrights {
+        margin-top: 25px;
+        text-align: center;
+        font-size: .75rem;
+    }
+
+    /* modal */
+
+    .bground {
+        background-color: transparent;
+    }
+
+    .bground .content {
+        margin: 20% 0 0 0;
+        border-radius: 10px 10px 0 0;
+        height: 90vh;
+        overflow: scroll;
+    }
+
+    .text-label {
+        font-size: 14px;
+    }
+
+    .formConfirmation {
+        height: 86vh;
+        padding: 0 35px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Special code provided */
+@media screen and (max-width: 768px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+
+@media screen and (max-width: 540px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-top: -15px;
+    }
+}

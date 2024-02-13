@@ -15,8 +15,9 @@ function firstNameFieldControl () {
     if (/^([A-Za-z]{2,20})?([-]{0,1})?([A-Za-z]{2,20})$/.test(firstNameField.value)) {
         firstNameField.style.border = "solid 1px green";
         firstNameFieldError.textContent = "Champ Valide";
+        firstNameFieldError.style.display = 'block';
         firstNameFieldError.style.color = 'green';
-        firstNameFieldError.style.fontSize = '14px';
+        firstNameFieldError.style.fontSize = '12px';
         firstNameFieldError.style.marginBottom = '5px';
         return true;
     }
@@ -24,8 +25,9 @@ function firstNameFieldControl () {
     else {
         firstNameField.style.border = "solid 1px red";
         firstNameFieldError.textContent = "Veuillez rentrer 2 caractères minimum";
+        firstNameFieldError.style.display = 'block';
         firstNameFieldError.style.color = 'red';
-        firstNameFieldError.style.fontSize = '14px';
+        firstNameFieldError.style.fontSize = '12px';
         firstNameFieldError.style.marginBottom = '5px';
         return false;
     }
@@ -56,8 +58,9 @@ function lastNameFieldControl () {
     if (/^([A-Za-z]{2,20})?([-]{0,1})?([A-Za-z]{2,20})$/.test(lastNameField.value)) {
         lastNameField.style.border = "solid 1px green";
         lastNameFieldError.textContent = "Champ Valide";
+        lastNameFieldError.style.display = 'block';
         lastNameFieldError.style.color = 'green';
-        lastNameFieldError.style.fontSize = '14px';
+        lastNameFieldError.style.fontSize = '12px';
         lastNameFieldError.style.marginBottom = '5px';
         return true;
     }
@@ -65,8 +68,9 @@ function lastNameFieldControl () {
     else {
         lastNameField.style.border = "solid 1px red";
         lastNameFieldError.textContent = "Veuillez rentrer 2 caractères minimum";
+        lastNameFieldError.style.display = 'block';
         lastNameFieldError.style.color = 'red';
-        lastNameFieldError.style.fontSize = '14px';
+        lastNameFieldError.style.fontSize = '12px';
         lastNameFieldError.style.marginBottom = '5px';
         return false;
     }
@@ -97,7 +101,8 @@ function emailFieldControl () {
     if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value)) {
         email.style.border = "solid 2px green";
         emailError.textContent = "Champ Valide";
-        emailError.style.fontSize = '14px';
+        emailError.style.display = 'block';
+        emailError.style.fontSize = '12px';
         emailError.style.color = 'green';
         emailError.style.marginBottom = '5px';
         return true;
@@ -106,7 +111,8 @@ function emailFieldControl () {
     else {
         email.style.border = "solid 2px red";
         emailError.textContent = "Veuillez rentrer une adresse email valide";
-        emailError.style.fontSize = '14px';
+        emailError.style.display = 'block';
+        emailError.style.fontSize = '12px';
         emailError.style.color = 'red';
         emailError.style.marginBottom = '5px';
         return false;
@@ -137,7 +143,8 @@ function birthdateFieldControl () {
     if (/^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/.test(birthdate.value)) {
         birthdate.style.border = "solid 2px green";
         birthdateError.textContent = "Champ Valide";
-        birthdateError.style.fontSize = '14px';
+        birthdateError.style.display = 'block';
+        birthdateError.style.fontSize = '12px';
         birthdateError.style.marginBottom = '10px';
         birthdateError.style.color = 'green';
         return true;
@@ -146,7 +153,8 @@ function birthdateFieldControl () {
     else {
         birthdate.style.border = "solid 2px red";
         birthdateError.textContent = "Vous devez entrer votre date de naissance.";
-        birthdateError.style.fontSize = '14px';
+        birthdateError.style.display = 'block';
+        birthdateError.style.fontSize = '12px';
         birthdateError.style.marginBottom = '10px';
         birthdateError.style.color = 'red';
         return false;
@@ -177,8 +185,9 @@ function quantityFormControl () {
     if (quantity.value >= 0) {
         quantity.style.border = "solid 2px green";
         quantityError.textContent = "Champ Valide";
+        quantityError.style.display = 'block';
         quantityError.style.color = "green";
-        quantityError.style.fontSize = "14px";
+        quantityError.style.fontSize = "12px";
         quantityError.style.marginBottom = '10px';
         return true;
     }
@@ -186,7 +195,8 @@ function quantityFormControl () {
     else {
         quantity.style.border = "solid 2px red";
         quantityError.textContent = "Merci d'indiquer le nombre de tournois";
-        quantityError.style.fontSize = '15px';
+        quantityError.style.display = 'block';
+        quantityError.style.fontSize = '12px';
         quantityError.style.marginBottom = '10px';
         quantityError.style.color = 'red';
         return false;
@@ -218,16 +228,18 @@ function checkboxLocationFormControl() {
 
         if(checkLocation[i].checked) {
             locationError.textContent ='Champ Valide';
+            locationError.style.display = 'block';
             locationError.style.color = 'green';
-            locationError.style.fontSize = '15px';
+            locationError.style.fontSize = '12px';
             locationError.style.marginBottom = '10px';
             return true;
         }
     }
 
     locationError.textContent ='Champ Invalide';
+    locationError.style.display = 'block';
     locationError.style.color = 'red';
-    locationError.style.fontSize = '15px';
+    locationError.style.fontSize = '12px';
     locationError.style.marginBottom = '10px';
     return false;
 }
@@ -255,15 +267,17 @@ function conditionCheckboxFormControl() {
     if(checkbox1.checked ) {
         checkbox1.style.border = "solid 2px green";
         conditionCheckboxError.textContent = "Champs Valide";
+        conditionCheckboxError.style.display = "block";
         conditionCheckboxError.style.color = "green";
-        conditionCheckboxError.style.fontSize = "15px";
+        conditionCheckboxError.style.fontSize = "12px";
         conditionCheckboxError.style.marginBottom = '10px';
         return true;
 
     } else {
         checkbox1.style.border = "solid 2px red";
         conditionCheckboxError.textContent = "Merci d'accepter les conditions d'utilisations";
-        conditionCheckboxError.style.fontSize = '15px';
+        conditionCheckboxError.style.display = "block";
+        conditionCheckboxError.style.fontSize = '12px';
         conditionCheckboxError.style.marginBottom = '10px';
         conditionCheckboxError.style.color = 'red';
         return false;
