@@ -3,6 +3,10 @@
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media all and (min-width: 767px) and (max-width: 980px) {
+    header {
+        z-index: 99;
+    }
+
     .hero-section {
         display: block;
         box-shadow: unset;
@@ -28,6 +32,10 @@
 
 /* Small devices (phones, less than 768px) */
 @media all and (max-width: 767px) {
+    header {
+        z-index: 99;
+    }
+
     .header-logo img {
         width: 55%;
         margin-left: 10px;
@@ -42,6 +50,10 @@
         display: block;
         margin-top: -10px;
         color: red;
+    }
+
+    .main-navbar {
+        background-color: #fff;
     }
 
     main {
@@ -96,10 +108,11 @@
 
     .bground {
         background-color: transparent;
+        margin: 20% 0 0 0;
     }
 
     .bground .content {
-        margin: 20% 0 0 0;
+        margin: 0;
         border-radius: 10px 10px 0 0;
         height: 90vh;
         overflow: scroll;
